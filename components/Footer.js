@@ -13,7 +13,7 @@ const Footer = () => {
               <li><i className="fa-solid fa-phone"></i><a href="tel:+91-9781018180">+91-9781018180</a></li>
               <li><i className="fa-solid fa-envelope"></i><a
                 href="mailto:mountainpackersmover@gmail.com">mountainpackersmover@gmail.com</a></li>
-              <li><i className="fa-solid fa-map-marker"></i>2248 Madiwala Town, Manimajra, Chandigarh — 160101</li>
+              <li><i className="fa-solid fa-location-dot"></i> 2248 Madiwala Town, Manimajra, Chandigarh — 160101</li>
             </ul>
           </div>
           <div className="mp-fcol">

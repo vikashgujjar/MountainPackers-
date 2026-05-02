@@ -19,28 +19,28 @@ const StatsBand = () => {
       <div className="container">
         <div className="mp-sband-grid">
           <div className="mp-sbi">
-            <span className="mp-sbi-ico"><i className="fa fa-calendar"></i></span>
+            <span className="mp-sbi-ico"><i className="fa-solid fa-calendar-check"></i></span>
             <div className="mp-sbi-txt">
               <span className="mp-sbi-num"><span>{stats.stat1}</span>+</span>
               <span className="mp-sbi-lbl">Years Experience</span>
             </div>
           </div>
           <div className="mp-sbi">
-            <span className="mp-sbi-ico"><i className="fa fa-truck"></i></span>
+            <span className="mp-sbi-ico"><i className="fa-solid fa-truck-fast"></i></span>
             <div className="mp-sbi-txt">
               <span className="mp-sbi-num"><span>{stats.stat2}</span>+</span>
               <span className="mp-sbi-lbl">Vehicles</span>
             </div>
           </div>
           <div className="mp-sbi">
-            <span className="mp-sbi-ico"><i className="fa fa-users"></i></span>
+            <span className="mp-sbi-ico"><i className="fa-solid fa-users"></i></span>
             <div className="mp-sbi-txt">
               <span className="mp-sbi-num"><span>{stats.stat3}</span>K+</span>
               <span className="mp-sbi-lbl">Happy Clients</span>
             </div>
           </div>
           <div className="mp-sbi">
-            <span className="mp-sbi-ico"><i className="fa fa-thumbs-o-up"></i></span>
+            <span className="mp-sbi-ico"><i className="fa-solid fa-thumbs-up"></i></span>
             <div className="mp-sbi-txt">
               <span className="mp-sbi-num"><span>{stats.stat4}</span>K+</span>
               <span className="mp-sbi-lbl">Projects Done</span>

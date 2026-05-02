@@ -5,7 +5,7 @@ const ContactSection = () => {
     <section className="mp-contact-section py-10 bg-white position-relative overflow-hidden">
       {/* Decorative Elements */}
       <div className="position-absolute top-0 end-0 p-10 opacity-05 pointer-events-none">
-        <i className="fa fa-envelope-open display-1 text-navy rotate-12"></i>
+        <i className="fa-solid fa-envelope-open display-1 text-navy rotate-12"></i>
       </div>
       <div className="mp-dot-pattern position-absolute inset-0 opacity-05"></div>
 
@@ -48,7 +48,7 @@ const ContactSection = () => {
                   </div>
                   <div className="col-12">
                     <button type="submit" className="mp-hbtn py-4 h5 mb-0 text-uppercase tracking-widest text-white border-0">
-                      Send Message <i className="fa fa-paper-plane ms-2"></i>
+                      Send Message <i className="fa-solid fa-paper-plane ms-2"></i>
                     </button>
                   </div>
                 </div>
@@ -66,7 +66,7 @@ const ContactSection = () => {
                 <div className="d-flex flex-column gap-5">
                   <div className="d-flex align-items-start gap-4">
                     <div className="mp-icon-box-3d bg-red" style={{ width: '50px', height: '50px', flex: '0 0 auto', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
-                      <i className="fa fa-phone text-white"></i>
+                      <i className="fa-solid fa-phone text-white"></i>
                     </div>
                     <div>
                       <span className="d-block small fw-bold text-white-50 text-uppercase tracking-widest mb-1" style={{ fontSize: '10px' }}>Call Us Now</span>
@@ -76,7 +76,7 @@ const ContactSection = () => {
 
                   <div className="d-flex align-items-start gap-4">
                     <div className="mp-icon-box-3d bg-red" style={{ width: '50px', height: '50px', flex: '0 0 auto', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
-                      <i className="fa fa-envelope text-white"></i>
+                      <i className="fa-solid fa-envelope text-white"></i>
                     </div>
                     <div>
                       <span className="d-block small fw-bold text-white-50 text-uppercase tracking-widest mb-1" style={{ fontSize: '10px' }}>Email Address</span>
@@ -86,7 +86,7 @@ const ContactSection = () => {
 
                   <div className="d-flex align-items-start gap-4">
                     <div className="mp-icon-box-3d bg-red" style={{ width: '50px', height: '50px', flex: '0 0 auto', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
-                      <i className="fa fa-map-marker text-white"></i>
+                      <i className="fa-solid fa-location-dot text-white"></i>
                     </div>
                     <div>
                       <span className="d-block small fw-bold text-white-50 text-uppercase tracking-widest mb-1" style={{ fontSize: '10px' }}>Head Office</span>
@@ -102,7 +102,7 @@ const ContactSection = () => {
                 <div className="d-flex gap-3">
                   {['facebook', 'twitter', 'instagram', 'pinterest', 'youtube'].map((social) => (
                     <a key={social} href="#" className="mp-social-icon-btn shadow-sm bg-white rounded-circle d-flex align-items-center justify-content-center text-navy transition-all" style={{ width: '45px', height: '45px' }}>
-                      <i className={`fa fa-${social}`}></i>
+                      <i className={`fa-brands fa-${social === 'facebook' ? 'facebook-f' : social}`}></i>
                     </a>
                   ))}
                 </div>

@@ -82,12 +82,12 @@ const BranchSection = () => {
                       <div>
                         <h4 className="h3 fw-black text-navy text-uppercase tracking-1 mb-1">{b.title}</h4>
                         <div className="d-flex gap-2">
-                          {[1, 2, 3, 4, 5].map(star => <i key={star} className="fa fa-star text-amber small"></i>)}
+                          {[1, 2, 3, 4, 5].map(star => <i key={star} className="fa-solid fa-star text-amber small"></i>)}
                           <span className="small text-muted fw-bold ms-2">Certified Branch</span>
                         </div>
                       </div>
                       <div className="mp-icon-box-3d" style={{ background: 'var(--navy)', width: '50px', height: '50px' }}>
-                        <i className={`fa ${b.icon} text-white h5 mb-0`}></i>
+                        <i className={`fa-solid ${b.icon} text-white h5 mb-0`}></i>
                       </div>
                     </div>
 
@@ -95,7 +95,7 @@ const BranchSection = () => {
                       <div className="col-sm-6">
                         <div className="d-flex align-items-start gap-3">
                           <div className="mp-mini-icon-circle bg-light text-red p-2 rounded-circle">
-                            <i className="fa fa-phone small"></i>
+                            <i className="fa-solid fa-phone small"></i>
                           </div>
                           <div>
                             <span className="d-block small fw-bold text-muted text-uppercase tracking-widest mb-1" style={{ fontSize: '9px' }}>Contact</span>
@@ -106,7 +106,7 @@ const BranchSection = () => {
                       <div className="col-sm-6">
                         <div className="d-flex align-items-start gap-3">
                           <div className="mp-mini-icon-circle bg-light text-red p-2 rounded-circle">
-                            <i className="fa fa-envelope small"></i>
+                            <i className="fa-solid fa-envelope small"></i>
                           </div>
                           <div>
                             <span className="d-block small fw-bold text-muted text-uppercase tracking-widest mb-1" style={{ fontSize: '9px' }}>Email</span>
@@ -117,7 +117,7 @@ const BranchSection = () => {
                       <div className="col-12 pt-3 border-top">
                         <div className="d-flex align-items-start gap-3">
                           <div className="mp-mini-icon-circle bg-navy text-white p-2 rounded-circle d-flex align-items-center justify-content-center" style={{ flex: '0 0 auto', width: '45px', height: '45px' }}>
-                            <i className="fa fa-map-marker small"></i>
+                            <i className="fa-solid fa-location-dot small"></i>
                           </div>
                           <div>
                             <span className="d-block small fw-bold text-muted text-uppercase tracking-widest mb-1" style={{ fontSize: '9px' }}>Address</span>

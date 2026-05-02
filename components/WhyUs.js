@@ -12,7 +12,7 @@ const WhyUs = () => {
               detail from packing to delivery so you can focus on what matters most.</p>
             <div className="mp-feats">
               <div className="mp-feat sr vis d1">
-                <div className="mp-fi"><i className="fa fa-truck"></i></div>
+                <div className="mp-fi"><i className="fa-solid fa-truck-fast"></i></div>
                 <div className="mp-ft">
                   <h4>Door Step Pickup &amp; Delivery</h4>
                   <p>Our delivery and pickup management makes shifting smooth, reliable, secure, and
@@ -20,7 +20,7 @@ const WhyUs = () => {
                 </div>
               </div>
               <div className="mp-feat sr vis d2">
-                <div className="mp-fi"><i className="fa fa-graduation-cap"></i></div>
+                <div className="mp-fi"><i className="fa-solid fa-user-graduate"></i></div>
                 <div className="mp-ft">
                   <h4>Professional Packing</h4>
                   <p>Expert professionals secure your items with premium packing materials for zero-damage
@@ -28,14 +28,14 @@ const WhyUs = () => {
                 </div>
               </div>
               <div className="mp-feat sr vis d3">
-                <div className="mp-fi"><i className="fa fa-umbrella"></i></div>
+                <div className="mp-fi"><i className="fa-solid fa-umbrella"></i></div>
                 <div className="mp-ft">
                   <h4>Safety Handling</h4>
                   <p>Every item handled with extra care throughout — no damage, no loss, guaranteed.</p>
                 </div>
               </div>
               <div className="mp-feat sr vis d4">
-                <div className="mp-fi"><i className="fa fa-clock-o"></i></div>
+                <div className="mp-fi"><i className="fa-solid fa-clock"></i></div>
                 <div className="mp-ft">
                   <h4>On Time Delivery</h4>
                   <p>Guaranteed on-time delivery every single time with our fleet and expert coordination

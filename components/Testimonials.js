@@ -58,7 +58,7 @@ const Testimonials = () => {
         <div className="mp-tw" style={{ maxWidth: '900px', margin: '0 auto', position: 'relative' }}>
           <div className="mp-tnav">
             <button
-              className="fa fa-angle-left testi_prev"
+              className="fa-solid fa-angle-left testi_prev"
               onClick={prevSlide}
               style={{
                 width: '50px',
@@ -79,7 +79,7 @@ const Testimonials = () => {
               onMouseLeave={(e) => { e.currentTarget.style.background = '#fff'; e.currentTarget.style.color = 'var(--navy)'; }}
             ></button>
             <button
-              className="fa fa-angle-right testi_next"
+              className="fa-solid fa-angle-right testi_next"
               onClick={nextSlide}
               style={{
                 width: '50px',

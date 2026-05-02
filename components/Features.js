@@ -19,14 +19,14 @@ const Features = () => {
 
         <div className="row g-5">
           {[
-            { icon: 'fa-shield', title: 'Fully Insured', desc: 'Every move is covered by comprehensive insurance, ensuring your absolute peace of mind.' },
-            { icon: 'fa-clock-o', title: 'On-Time Delivery', desc: 'Precision-timed logistics backed by Indias largest transportation network.' },
+            { icon: 'fa-shield-halved', title: 'Fully Insured', desc: 'Every move is covered by comprehensive insurance, ensuring your absolute peace of mind.' },
+            { icon: 'fa-clock', title: 'On-Time Delivery', desc: 'Precision-timed logistics backed by Indias largest transportation network.' },
             { icon: 'fa-users', title: 'Expert Team', desc: 'Trained specialists executing your relocation with surgical precision and care.' }
           ].map((f, i) => (
             <div key={i} className="col-lg-4 sr vis" style={{ transitionDelay: `${0.2 + i * 0.1}s` }}>
               <div className="mp-luxury-card-premium h-100 transition-all mp-border-gradient">
                 <div className="mp-icon-box-3d mb-5">
-                  <i className={`fa ${f.icon} h1 text-navy mb-0 transition-all`}></i>
+                  <i className={`fa-solid ${f.icon} h1 text-navy mb-0 transition-all`}></i>
                 </div>
                 <h3 className="h3 fw-black text-uppercase font-head tracking-2 mb-4">{f.title}</h3>
                 <p className="text-white-50 leading-loose mb-0 h6 fw-normal mp-line-height-extra">{f.desc}</p>

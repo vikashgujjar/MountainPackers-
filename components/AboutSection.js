@@ -81,7 +81,7 @@ const AboutSection = () => {
               </div>
 
               <Link href="/our-branches" className="mp-hbtn d-inline-flex px-5 py-3">
-                <span>View All Our Network</span> <i className="fa fa-arrow-right ms-2"></i>
+                <span>View All Our Network</span> <i className="fa-solid fa-arrow-right ms-2"></i>
               </Link>
             </div>
           </div>
