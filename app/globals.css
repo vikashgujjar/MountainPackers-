@@ -36,7 +36,8 @@
 }
 
 html {
-	scroll-behavior: smooth
+	scroll-behavior: smooth;
+	overflow-x: hidden;
 }
 
 body.home-three {
@@ -44,6 +45,7 @@ body.home-three {
 	background: var(--white);
 	color: var(--text);
 	overflow-x: hidden;
+	width: 100%;
 }
 
 /* SCROLL TOP */
@@ -7205,4 +7207,10 @@ body.home-three {
 	}
 
 
+}
+
+@media (max-width: 370px) {
+	.mp-sband-grid {
+		grid-template-columns: 1fr;
+	}
 }
