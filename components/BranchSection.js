@@ -68,7 +68,7 @@ const BranchSection = () => {
                       className="w-100 h-100 object-fit-cover transition-all group-hover:scale-110"
                     />
                     <div className="position-absolute top-0 start-0 p-4 z-2">
-                        <span className="mp-index-graphic text-navy mp-text-outline d-block">0{i+1}</span>
+                      <span className="mp-index-graphic text-navy mp-text-outline d-block">0{i + 1}</span>
                     </div>
 
 
@@ -86,7 +86,7 @@ const BranchSection = () => {
                           <span className="small text-muted fw-bold ms-2">Certified Branch</span>
                         </div>
                       </div>
-                      <div className="mp-icon-box-3d" style={{ background: 'var(--navy)', width: '50px', height: '50px' }}>
+                      <div className="mp-icon-box-3d" style={{ background: 'var(--navy)', width: '50px', height: '50px', flex: '0 0 auto' }}>
                         <i className={`fa-solid ${b.icon} text-white h5 mb-0`}></i>
                       </div>
                     </div>

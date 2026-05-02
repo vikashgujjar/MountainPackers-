@@ -85,7 +85,7 @@ const sidebarStats = [
 
 export default function DomesticShiftingPage() {
   return (
-    <main className="bg-white overflow-hidden">
+    <main className="bg-white">
       <TopBar />
       <Header />
 

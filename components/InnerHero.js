@@ -4,7 +4,7 @@ const InnerHero = ({ title, subtitle, eyebrow = "Company Profile", bgImage = "/i
   return (
     <section className="mp-inner-hero mp-hero-center-stage position-relative overflow-hidden py-0">
       {/* Dynamic Background */}
-      <div className="position-absolute inset-0 z-0 overflow-hidden">
+      <div className="position-absolute inset-0 z-0 overflow-hidden h-100">
         <img
           src={bgImage}
           alt="Background"
