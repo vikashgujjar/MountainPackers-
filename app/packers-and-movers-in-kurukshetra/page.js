@@ -6,6 +6,7 @@ import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import FloatingButtons from '@/components/FloatingButtons';
 import CTABand from '@/components/CTABand';
+import HeroQuoteForm from '@/components/HeroQuoteForm';
 
 export const metadata = {
   title: 'Mountain Packers - Best Packers and Movers in Kurukshetra',
@@ -113,8 +114,8 @@ export default function KurukshetraBranchPage() {
             </h1>
 
             <p className="mp-hero-sub">
-              Trusted shifting experts in Kurukshetra. We provide top-quality 
-              moving and packing services at affordable prices, ensuring a 
+              Trusted shifting experts in Kurukshetra. We provide top-quality
+              moving and packing services at affordable prices, ensuring a
               completely stress-free relocation for your home or office.
             </p>
 
@@ -129,59 +130,12 @@ export default function KurukshetraBranchPage() {
           </div>
 
           {/* Right — Quote Card */}
-          <div className="mp-hero-qcard">
-            <div className="mp-qcard-head">
-              <i className="fa-solid fa-map-location-dot" />
-              <div>
-                <h3>Kurukshetra Quote</h3>
-                <p>Seamless & stress-free moving</p>
-              </div>
-            </div>
-            <div className="mp-qcard-body">
-              <div className="mp-field">
-                <label>Your Name</label>
-                <input type="text" placeholder="Full name" />
-              </div>
-
-              <div className="mp-row2">
-                <div className="mp-field">
-                  <label>Mobile Number</label>
-                  <input type="tel" placeholder="+91 00000 00000" />
-                </div>
-                <div className="mp-field">
-                  <label>Shifting Type</label>
-                  <select defaultValue="">
-                    <option value="" disabled>Select Type</option>
-                    <option>Household Shifting</option>
-                    <option>Office Relocation</option>
-                    <option>Vehicle Transport</option>
-                    <option>Storage Services</option>
-                  </select>
-                </div>
-              </div>
-
-              <div className="mp-row2">
-                <div className="mp-field">
-                  <label>Current Location</label>
-                  <input type="text" placeholder="Kurukshetra area" />
-                </div>
-                <div className="mp-field">
-                  <label>Drop Location</label>
-                  <input type="text" placeholder="Target city" />
-                </div>
-              </div>
-
-              <div className="mp-field">
-                <label>Preferred Date</label>
-                <input type="date" />
-              </div>
-
-              <button className="mp-submit-btn">
-                <i className="fa-solid fa-paper-plane" style={{ marginRight: '8px' }} />
-                Plan My Kurukshetra Move
-              </button>
-            </div>
-          </div>
+          <HeroQuoteForm
+            title="Kurukshetra Branch"
+            subtitle="Request an on-site survey"
+            icon="fa-map-location-dot"
+            moveType="Kurukshetra Branch Quote"
+          />
         </div>
 
         {/* Wave */}

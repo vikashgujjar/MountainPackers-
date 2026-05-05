@@ -6,6 +6,7 @@ import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import FloatingButtons from '@/components/FloatingButtons';
 import CTABand from '@/components/CTABand';
+import HeroQuoteForm from '@/components/HeroQuoteForm';
 
 export const metadata = {
   title: 'Mountain Packers - Packers and Movers in Mandi',
@@ -112,8 +113,8 @@ export default function MandiBranchPage() {
             </h1>
 
             <p className="mp-hero-sub">
-              Your search for reliable packers in Mandi ends here. 
-              Mountain Packers &amp; Movers provides affordable, expert, 
+              Your search for reliable packers in Mandi ends here.
+              Mountain Packers &amp; Movers provides affordable, expert,
               and safe shifting services tailored for the mountain terrain.
             </p>
 
@@ -128,59 +129,12 @@ export default function MandiBranchPage() {
           </div>
 
           {/* Right — Quote Card */}
-          <div className="mp-hero-qcard">
-            <div className="mp-qcard-head">
-              <i className="fa-solid fa-mountain" />
-              <div>
-                <h3>Mandi Branch</h3>
-                <p>Secure your mountain move</p>
-              </div>
-            </div>
-            <div className="mp-qcard-body">
-              <div className="mp-field">
-                <label>Your Name</label>
-                <input type="text" placeholder="Full name" />
-              </div>
-
-              <div className="mp-row2">
-                <div className="mp-field">
-                  <label>Mobile Number</label>
-                  <input type="tel" placeholder="+91 00000 00000" />
-                </div>
-                <div className="mp-field">
-                  <label>Service Type</label>
-                  <select defaultValue="">
-                    <option value="" disabled>Select Service</option>
-                    <option>Home Relocation</option>
-                    <option>Office Shifting</option>
-                    <option>Vehicle Transport</option>
-                    <option>Warehousing</option>
-                  </select>
-                </div>
-              </div>
-
-              <div className="mp-row2">
-                <div className="mp-field">
-                  <label>Current Area</label>
-                  <input type="text" placeholder="Mandi Area" />
-                </div>
-                <div className="mp-field">
-                  <label>Target Area</label>
-                  <input type="text" placeholder="Destination" />
-                </div>
-              </div>
-
-              <div className="mp-field">
-                <label>Moving Date</label>
-                <input type="date" />
-              </div>
-
-              <button className="mp-submit-btn">
-                <i className="fa-solid fa-truck-moving" style={{ marginRight: '8px' }} />
-                Get Mandi Estimate
-              </button>
-            </div>
-          </div>
+          <HeroQuoteForm
+            title="Mandi Branch"
+            subtitle="Request an on-site survey"
+            icon="fa-map-location-dot"
+            moveType="Mandi Branch Quote"
+          />
         </div>
 
         {/* Wave */}

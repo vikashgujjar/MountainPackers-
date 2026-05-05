@@ -14,6 +14,9 @@ import Map from '@/components/Map';
 import Locations from '@/components/Locations';
 import Footer from '@/components/Footer';
 import FloatingButtons from '@/components/FloatingButtons';
+import PricingTable from '@/components/PricingTable';
+import WhyChooseUs from '@/components/WhyChooseUs';
+import FAQSection from '@/components/FAQSection';
 
 export default function Home() {
   return (
@@ -25,10 +28,13 @@ export default function Home() {
       <WhyUs />
       <About />
       <Services />
+      <PricingTable />
+      <WhyChooseUs />
       <Promo />
       <CTABand />
       <Solutions />
       <Testimonials />
+      <FAQSection />
       <Map />
       <Locations />
       <Footer />

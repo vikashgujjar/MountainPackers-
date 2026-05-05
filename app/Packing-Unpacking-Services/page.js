@@ -6,6 +6,7 @@ import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import FloatingButtons from '@/components/FloatingButtons';
 import CTABand from '@/components/CTABand';
+import PackingQuoteForm from '@/components/PackingQuoteForm';
 
 export const metadata = {
   title: 'Best Packing and Unpacking Services In Chandigarh',
@@ -113,8 +114,8 @@ export default function PackingUnpackingPage() {
             </h1>
 
             <p className="mp-hero-sub">
-              Professional grade packing solutions that ensure your belongings 
-              survive any journey. We use multi-layer protection and expert 
+              Professional grade packing solutions that ensure your belongings
+              survive any journey. We use multi-layer protection and expert
               techniques for total peace of mind.
             </p>
 
@@ -129,59 +130,12 @@ export default function PackingUnpackingPage() {
           </div>
 
           {/* Right — Quote Card */}
-          <div className="mp-hero-qcard">
-            <div className="mp-qcard-head">
-              <i className="fa-solid fa-box-open" />
-              <div>
-                <h3>Packing Quote</h3>
-                <p>Get an estimate for your items</p>
-              </div>
-            </div>
-            <div className="mp-qcard-body">
-              <div className="mp-field">
-                <label>Your Name</label>
-                <input type="text" placeholder="Enter full name" />
-              </div>
-
-              <div className="mp-row2">
-                <div className="mp-field">
-                  <label>Phone Number</label>
-                  <input type="tel" placeholder="+91 00000 00000" />
-                </div>
-                <div className="mp-field">
-                  <label>Material Type</label>
-                  <select defaultValue="">
-                    <option value="" disabled>Select Primary Type</option>
-                    <option>Household Goods</option>
-                    <option>Fragile / Glassware</option>
-                    <option>Electronic Equipment</option>
-                    <option>Industrial Machinery</option>
-                  </select>
-                </div>
-              </div>
-
-              <div className="mp-row2">
-                <div className="mp-field">
-                  <label>Pickup Area</label>
-                  <input type="text" placeholder="Sector/Location" />
-                </div>
-                <div className="mp-field">
-                  <label>Quantity</label>
-                  <input type="text" placeholder="Approx no. of items" />
-                </div>
-              </div>
-
-              <div className="mp-field">
-                <label>Service Date</label>
-                <input type="date" />
-              </div>
-
-              <button className="mp-submit-btn">
-                <i className="fa-solid fa-box" style={{ marginRight: '8px' }} />
-                Get Packing Estimate
-              </button>
-            </div>
-          </div>
+          <PackingQuoteForm
+            title="Packing Quote"
+            subtitle="Get an estimate for your items"
+            icon="fa-box-open"
+            moveType="Packing & Unpacking Service Quote"
+          />
         </div>
 
         {/* Wave */}

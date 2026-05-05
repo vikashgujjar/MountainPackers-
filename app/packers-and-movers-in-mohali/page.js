@@ -6,6 +6,7 @@ import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import FloatingButtons from '@/components/FloatingButtons';
 import CTABand from '@/components/CTABand';
+import HeroQuoteForm from '@/components/HeroQuoteForm';
 
 export const metadata = {
   title: 'Mountain Packers - Best Packers and Movers in Mohali',
@@ -112,8 +113,8 @@ export default function MohaliBranchPage() {
             </h1>
 
             <p className="mp-hero-sub">
-              Professional, reliable, and affordable shifting in Mohali. 
-              Our expert team handles IT relocation, household shifting, 
+              Professional, reliable, and affordable shifting in Mohali.
+              Our expert team handles IT relocation, household shifting,
               and vehicle transport with 100% safety and precision.
             </p>
 
@@ -128,59 +129,12 @@ export default function MohaliBranchPage() {
           </div>
 
           {/* Right — Quote Card */}
-          <div className="mp-hero-qcard">
-            <div className="mp-qcard-head">
-              <i className="fa-solid fa-building-circle-check" />
-              <div>
-                <h3>Mohali Quote</h3>
-                <p>Swift & secure urban moving</p>
-              </div>
-            </div>
-            <div className="mp-qcard-body">
-              <div className="mp-field">
-                <label>Name</label>
-                <input type="text" placeholder="Full name" />
-              </div>
-
-              <div className="mp-row2">
-                <div className="mp-field">
-                  <label>Mobile</label>
-                  <input type="tel" placeholder="+91 00000 00000" />
-                </div>
-                <div className="mp-field">
-                  <label>Shifting Type</label>
-                  <select defaultValue="">
-                    <option value="" disabled>Select Type</option>
-                    <option>House Shifting</option>
-                    <option>Office/IT Relocation</option>
-                    <option>Vehicle Transit</option>
-                    <option>Storage</option>
-                  </select>
-                </div>
-              </div>
-
-              <div className="mp-row2">
-                <div className="mp-field">
-                  <label>Current Area</label>
-                  <input type="text" placeholder="Mohali Sector" />
-                </div>
-                <div className="mp-field">
-                  <label>Destination City</label>
-                  <input type="text" placeholder="Target city" />
-                </div>
-              </div>
-
-              <div className="mp-field">
-                <label>Shifting Date</label>
-                <input type="date" />
-              </div>
-
-              <button className="mp-submit-btn">
-                <i className="fa-solid fa-paper-plane" style={{ marginRight: '8px' }} />
-                Get Mohali Estimate
-              </button>
-            </div>
-          </div>
+          <HeroQuoteForm
+            title="Mohali Branch"
+            subtitle="Request an on-site survey"
+            icon="fa-map-location-dot"
+            moveType="Mohali Branch Quote"
+          />
         </div>
 
         {/* Wave */}

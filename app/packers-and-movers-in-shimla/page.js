@@ -6,6 +6,7 @@ import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import FloatingButtons from '@/components/FloatingButtons';
 import CTABand from '@/components/CTABand';
+import HeroQuoteForm from '@/components/HeroQuoteForm';
 
 export const metadata = {
   title: 'Mountain Packers - Best Packers and Movers in Shimla',
@@ -112,8 +113,8 @@ export default function ShimlaBranchPage() {
             </h1>
 
             <p className="mp-hero-sub">
-              Trusted, secure, and reliable shifting in the Queen of Hills. 
-              Mountain Packers &amp; Movers provides complete solutions and 
+              Trusted, secure, and reliable shifting in the Queen of Hills.
+              Mountain Packers &amp; Movers provides complete solutions and
               supreme quality for all your mountain relocation needs.
             </p>
 
@@ -128,59 +129,12 @@ export default function ShimlaBranchPage() {
           </div>
 
           {/* Right — Quote Card */}
-          <div className="mp-hero-qcard">
-            <div className="mp-qcard-head">
-              <i className="fa-solid fa-mountain-sun" />
-              <div>
-                <h3>Shimla Branch</h3>
-                <p>Book your mountain move</p>
-              </div>
-            </div>
-            <div className="mp-qcard-body">
-              <div className="mp-field">
-                <label>Your Name</label>
-                <input type="text" placeholder="Full name" />
-              </div>
-
-              <div className="mp-row2">
-                <div className="mp-field">
-                  <label>Contact Number</label>
-                  <input type="tel" placeholder="+91 00000 00000" />
-                </div>
-                <div className="mp-field">
-                  <label>Shifting Required</label>
-                  <select defaultValue="">
-                    <option value="" disabled>Select Service</option>
-                    <option>Home Relocation</option>
-                    <option>Commercial Shifting</option>
-                    <option>Car/Bike Transit</option>
-                    <option>Storage/Warehouse</option>
-                  </select>
-                </div>
-              </div>
-
-              <div className="mp-row2">
-                <div className="mp-field">
-                  <label>Current Locality</label>
-                  <input type="text" placeholder="Shimla Area" />
-                </div>
-                <div className="mp-field">
-                  <label>Target Area</label>
-                  <input type="text" placeholder="Destination" />
-                </div>
-              </div>
-
-              <div className="mp-field">
-                <label>Proposed Date</label>
-                <input type="date" />
-              </div>
-
-              <button className="mp-submit-btn">
-                <i className="fa-solid fa-truck-fast" style={{ marginRight: '8px' }} />
-                Get Shimla Pricing
-              </button>
-            </div>
-          </div>
+          <HeroQuoteForm
+            title="Shimla Branch"
+            subtitle="Request an on-site survey"
+            icon="fa-map-location-dot"
+            moveType="Shimla Branch Quote"
+          />
         </div>
 
         {/* Wave */}

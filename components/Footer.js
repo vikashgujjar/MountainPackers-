@@ -62,13 +62,12 @@ const Footer = () => {
       <div className="container">
         <div className="mp-fbot">
           <div className="mp-fcopy">
-            <p>Copyright &copy; {new Date().getFullYear()} All rights reserved | Mountain Packers &amp; Movers</p>
+            <p>Copyright &copy; {new Date().getFullYear()} All rights reserved | Mountain Packers &amp; Movers | <a href="https://www.futuretouch.in/" target="_blank">Designed & Developed by Future Touch</a></p>
           </div>
           <div className="mp-fsoc">
-            <a href="#"><i className="fa-brands fa-facebook"></i></a>
-            <a href="#"><i className="fa-brands fa-twitter"></i></a>
-            <a href="#"><i className="fa-brands fa-instagram"></i></a>
-            <a href="#"><i className="fa-brands fa-pinterest"></i></a>
+            <a href="https://www.facebook.com/p/Mountain-Packers-Movers-100090872461843/?locale=tl_PH" target="_blank"><i className="fa-brands fa-facebook"></i></a>
+            <a href="https://x.com/PackersMountain" target="_blank"><i className="fa-brands fa-x-twitter"></i></a>
+            <a href="https://www.instagram.com/mountainpackers/" target="_blank"><i className="fa-brands fa-instagram"></i></a>
           </div>
         </div>
       </div>

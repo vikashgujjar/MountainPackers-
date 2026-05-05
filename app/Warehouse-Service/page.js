@@ -6,6 +6,7 @@ import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import FloatingButtons from '@/components/FloatingButtons';
 import CTABand from '@/components/CTABand';
+import WarehouseQuoteForm from '@/components/WarehouseQuoteForm';
 
 export const metadata = {
   title: 'Best Warehouse Services In Chandigarh - Mountain Packers',
@@ -113,8 +114,8 @@ export default function WarehouseServicePage() {
             </h1>
 
             <p className="mp-hero-sub">
-              Industry-leading storage solutions in Chandigarh. From household items 
-              to corporate assets, we provide a clean, secure, and climate-controlled 
+              Industry-leading storage solutions in Chandigarh. From household items
+              to corporate assets, we provide a clean, secure, and climate-controlled
               environment for your belongings.
             </p>
 
@@ -129,64 +130,12 @@ export default function WarehouseServicePage() {
           </div>
 
           {/* Right — Quote Card */}
-          <div className="mp-hero-qcard">
-            <div className="mp-qcard-head">
-              <i className="fa-solid fa-vault" />
-              <div>
-                <h3>Storage Quote</h3>
-                <p>Request a customized plan</p>
-              </div>
-            </div>
-            <div className="mp-qcard-body">
-              <div className="mp-field">
-                <label>Full Name</label>
-                <input type="text" placeholder="Enter name" />
-              </div>
-
-              <div className="mp-row2">
-                <div className="mp-field">
-                  <label>Phone Number</label>
-                  <input type="tel" placeholder="+91 00000 00000" />
-                </div>
-                <div className="mp-field">
-                  <label>Storage Duration</label>
-                  <select defaultValue="">
-                    <option value="" disabled>Select Duration</option>
-                    <option>Short Term (1-3 Months)</option>
-                    <option>Medium Term (3-12 Months)</option>
-                    <option>Long Term (1 Year+)</option>
-                  </select>
-                </div>
-              </div>
-
-              <div className="mp-row2">
-                <div className="mp-field">
-                  <label>Storage Type</label>
-                  <select defaultValue="">
-                    <option value="" disabled>Select Type</option>
-                    <option>Household Goods</option>
-                    <option>Office Inventory</option>
-                    <option>Vehicle Storage</option>
-                    <option>Commercial Stocks</option>
-                  </select>
-                </div>
-                <div className="mp-field">
-                  <label>Quantity</label>
-                  <input type="text" placeholder="Approx cubic feet" />
-                </div>
-              </div>
-
-              <div className="mp-field">
-                <label>Storage Start Date</label>
-                <input type="date" />
-              </div>
-
-              <button className="mp-submit-btn">
-                <i className="fa-solid fa-shield-halved" style={{ marginRight: '8px' }} />
-                Calculate Storage Plan
-              </button>
-            </div>
-          </div>
+          <WarehouseQuoteForm
+            title="Storage Quote"
+            subtitle="Request a customized plan"
+            icon="fa-vault"
+            moveType="Warehouse Service Quote"
+          />
         </div>
 
         {/* Wave */}

@@ -6,6 +6,7 @@ import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import FloatingButtons from '@/components/FloatingButtons';
 import CTABand from '@/components/CTABand';
+import HeroQuoteForm from '@/components/HeroQuoteForm';
 
 export const metadata = {
   title: 'Mountain Packers - Packers and Movers in Himachal Pardesh',
@@ -112,8 +113,8 @@ export default function HimachalBranchPage() {
             </h1>
 
             <p className="mp-hero-sub">
-              Providing safe and efficient moving services tailored to the unique 
-              topography of Himachal Pradesh. Trust our expert team for your 
+              Providing safe and efficient moving services tailored to the unique
+              topography of Himachal Pradesh. Trust our expert team for your
               next household or office shift.
             </p>
 
@@ -128,61 +129,12 @@ export default function HimachalBranchPage() {
           </div>
 
           {/* Right — Quote Card */}
-          <div className="mp-hero-qcard">
-            <div className="mp-qcard-head">
-              <i className="fa-solid fa-map-marked-alt" />
-              <div>
-                <h3>Himachal Quote</h3>
-                <p>Customized shifting plans</p>
-              </div>
-            </div>
-            <div className="mp-qcard-body">
-              <div className="mp-field">
-                <label>Full Name</label>
-                <input type="text" placeholder="Enter name" />
-              </div>
-
-              <div className="mp-row2">
-                <div className="mp-field">
-                  <label>Contact No.</label>
-                  <input type="tel" placeholder="+91 00000 00000" />
-                </div>
-                <div className="mp-field">
-                  <label>District</label>
-                  <select defaultValue="">
-                    <option value="" disabled>Select District</option>
-                    <option>Shimla</option>
-                    <option>Dharamshala / Kangra</option>
-                    <option>Mandi</option>
-                    <option>Solan</option>
-                    <option>Kullu / Manali</option>
-                    <option>Hamirpur</option>
-                  </select>
-                </div>
-              </div>
-
-              <div className="mp-row2">
-                <div className="mp-field">
-                  <label>Current Location</label>
-                  <input type="text" placeholder="City/Village" />
-                </div>
-                <div className="mp-field">
-                  <label>Destination</label>
-                  <input type="text" placeholder="Target City" />
-                </div>
-              </div>
-
-              <div className="mp-field">
-                <label>Tentative Date</label>
-                <input type="date" />
-              </div>
-
-              <button className="mp-submit-btn">
-                <i className="fa-solid fa-truck-fast" style={{ marginRight: '8px' }} />
-                Plan My Himachal Shift
-              </button>
-            </div>
-          </div>
+          <HeroQuoteForm
+            title="Himachal Branch"
+            subtitle="Request an on-site survey"
+            icon="fa-map-location-dot"
+            moveType="Himachal Branch Quote"
+          />
         </div>
 
         {/* Wave */}

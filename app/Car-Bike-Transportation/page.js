@@ -6,6 +6,7 @@ import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import FloatingButtons from '@/components/FloatingButtons';
 import CTABand from '@/components/CTABand';
+import VehicleQuoteForm from '@/components/VehicleQuoteForm';
 
 export const metadata = {
   title: 'Car & Bike Transportation Services In Chandigarh',
@@ -145,59 +146,7 @@ export default function CarBikeTransportationPage() {
           </div>
 
           {/* Right — Quote Card */}
-          <div className="mp-hero-qcard">
-            <div className="mp-qcard-head">
-              <i className="fa-solid fa-car" />
-              <div>
-                <h3>Book Transport</h3>
-                <p>Get an instant free quote</p>
-              </div>
-            </div>
-            <div className="mp-qcard-body">
-              <div className="mp-field">
-                <label>Your Name</label>
-                <input type="text" placeholder="Enter your full name" />
-              </div>
-
-              <div className="mp-row2">
-                <div className="mp-field">
-                  <label>Phone Number</label>
-                  <input type="tel" placeholder="+91 00000 00000" />
-                </div>
-                <div className="mp-field">
-                  <label>Vehicle Type</label>
-                  <select defaultValue="">
-                    <option value="" disabled>Select Vehicle</option>
-                    <option>Car (Sedan)</option>
-                    <option>Car (SUV)</option>
-                    <option>Bike / Two-Wheeler</option>
-                    <option>Luxury Vehicle</option>
-                  </select>
-                </div>
-              </div>
-
-              <div className="mp-row2">
-                <div className="mp-field">
-                  <label>Pickup City</label>
-                  <input type="text" placeholder="From city" />
-                </div>
-                <div className="mp-field">
-                  <label>Drop City</label>
-                  <input type="text" placeholder="To city" />
-                </div>
-              </div>
-
-              <div className="mp-field">
-                <label>Preferred Date</label>
-                <input type="date" />
-              </div>
-
-              <button className="mp-submit-btn">
-                <i className="fa-solid fa-paper-plane" style={{ marginRight: '8px' }} />
-                Get Free Quote
-              </button>
-            </div>
-          </div>
+          <VehicleQuoteForm />
         </div>
 
         {/* Wave */}

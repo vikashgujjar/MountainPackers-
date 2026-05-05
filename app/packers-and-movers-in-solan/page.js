@@ -6,6 +6,7 @@ import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import FloatingButtons from '@/components/FloatingButtons';
 import CTABand from '@/components/CTABand';
+import HeroQuoteForm from '@/components/HeroQuoteForm';
 
 export const metadata = {
   title: 'Mountain Packers - Best Packers and Movers in Solan',
@@ -112,8 +113,8 @@ export default function SolanBranchPage() {
             </h1>
 
             <p className="mp-hero-sub">
-              Professional, authorized, and hassle-free moving experience in Solan. 
-              Our expert team provides customized plans for safe and secure 
+              Professional, authorized, and hassle-free moving experience in Solan.
+              Our expert team provides customized plans for safe and secure
               transportation of your valuables at affordable prices.
             </p>
 
@@ -128,59 +129,12 @@ export default function SolanBranchPage() {
           </div>
 
           {/* Right — Quote Card */}
-          <div className="mp-hero-qcard">
-            <div className="mp-qcard-head">
-              <i className="fa-solid fa-truck-ramp-box" />
-              <div>
-                <h3>Solan Estimate</h3>
-                <p>Swift & secure relocation</p>
-              </div>
-            </div>
-            <div className="mp-qcard-body">
-              <div className="mp-field">
-                <label>Your Name</label>
-                <input type="text" placeholder="Full name" />
-              </div>
-
-              <div className="mp-row2">
-                <div className="mp-field">
-                  <label>Mobile Number</label>
-                  <input type="tel" placeholder="+91 00000 00000" />
-                </div>
-                <div className="mp-field">
-                  <label>Service Type</label>
-                  <select defaultValue="">
-                    <option value="" disabled>Select Service</option>
-                    <option>House Shifting</option>
-                    <option>Office Relocation</option>
-                    <option>Industrial Shifting</option>
-                    <option>Vehicle Transit</option>
-                  </select>
-                </div>
-              </div>
-
-              <div className="mp-row2">
-                <div className="mp-field">
-                  <label>Current Area</label>
-                  <input type="text" placeholder="Solan Locality" />
-                </div>
-                <div className="mp-field">
-                  <label>Target City</label>
-                  <input type="text" placeholder="Destination" />
-                </div>
-              </div>
-
-              <div className="mp-field">
-                <label>Moving Date</label>
-                <input type="date" />
-              </div>
-
-              <button className="mp-submit-btn">
-                <i className="fa-solid fa-paper-plane" style={{ marginRight: '8px' }} />
-                Get Solan Quote
-              </button>
-            </div>
-          </div>
+          <HeroQuoteForm
+            title="Solan Branch"
+            subtitle="Request an on-site survey"
+            icon="fa-map-location-dot"
+            moveType="Solan Branch Quote"
+          />
         </div>
 
         {/* Wave */}

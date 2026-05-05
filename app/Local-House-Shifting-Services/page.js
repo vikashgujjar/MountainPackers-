@@ -6,6 +6,7 @@ import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import FloatingButtons from '@/components/FloatingButtons';
 import CTABand from '@/components/CTABand';
+import HeroQuoteForm from '@/components/HeroQuoteForm';
 
 export const metadata = {
   title: 'Local Shifting Services In Chandigarh - Mountain Packers',
@@ -113,8 +114,8 @@ export default function LocalShiftingPage() {
             </h1>
 
             <p className="mp-hero-sub">
-              Fast, reliable, and affordable local shifting services in Chandigarh. 
-              We handle your move with the care of a neighbor and the precision 
+              Fast, reliable, and affordable local shifting services in Chandigarh.
+              We handle your move with the care of a neighbor and the precision
               of a professional.
             </p>
 
@@ -129,60 +130,12 @@ export default function LocalShiftingPage() {
           </div>
 
           {/* Right — Quote Card */}
-          <div className="mp-hero-qcard">
-            <div className="mp-qcard-head">
-              <i className="fa-solid fa-truck-ramp-box" />
-              <div>
-                <h3>Local Move</h3>
-                <p>Get an instant city-move quote</p>
-              </div>
-            </div>
-            <div className="mp-qcard-body">
-              <div className="mp-field">
-                <label>Your Name</label>
-                <input type="text" placeholder="Full name" />
-              </div>
-
-              <div className="mp-row2">
-                <div className="mp-field">
-                  <label>Mobile Number</label>
-                  <input type="tel" placeholder="+91 00000 00000" />
-                </div>
-                <div className="mp-field">
-                  <label>House Size</label>
-                  <select defaultValue="">
-                    <option value="" disabled>Select Size</option>
-                    <option>1 BHK</option>
-                    <option>2 BHK</option>
-                    <option>3 BHK</option>
-                    <option>4+ BHK</option>
-                    <option>Just few items</option>
-                  </select>
-                </div>
-              </div>
-
-              <div className="mp-row2">
-                <div className="mp-field">
-                  <label>From Area</label>
-                  <input type="text" placeholder="Sector/Colony" />
-                </div>
-                <div className="mp-field">
-                  <label>To Area</label>
-                  <input type="text" placeholder="Destination Sector" />
-                </div>
-              </div>
-
-              <div className="mp-field">
-                <label>Moving Date</label>
-                <input type="date" />
-              </div>
-
-              <button className="mp-submit-btn">
-                <i className="fa-solid fa-bolt" style={{ marginRight: '8px' }} />
-                Get Instant Quote
-              </button>
-            </div>
-          </div>
+          <HeroQuoteForm
+            title="Shifting Quote"
+            subtitle="Free, no-obligation estimate"
+            icon="fa-house-chimney"
+            moveType="Local House Shifting Quote"
+          />
         </div>
 
         {/* Wave */}

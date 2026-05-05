@@ -6,6 +6,7 @@ import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import FloatingButtons from '@/components/FloatingButtons';
 import CTABand from '@/components/CTABand';
+import HeroQuoteForm from '@/components/HeroQuoteForm';
 
 export const metadata = {
   title: 'Mountain Packers - Best Packers and Movers in Ludhiana',
@@ -112,8 +113,8 @@ export default function LudhianaBranchPage() {
             </h1>
 
             <p className="mp-hero-sub">
-              Professional, affordable, and seamless shifting services in Ludhiana. 
-              Our experienced team handles everything from industrial relocation 
+              Professional, affordable, and seamless shifting services in Ludhiana.
+              Our experienced team handles everything from industrial relocation
               to household shifting with maximum care and precision.
             </p>
 
@@ -128,59 +129,12 @@ export default function LudhianaBranchPage() {
           </div>
 
           {/* Right — Quote Card */}
-          <div className="mp-hero-qcard">
-            <div className="mp-qcard-head">
-              <i className="fa-solid fa-truck-fast" />
-              <div>
-                <h3>Ludhiana Branch</h3>
-                <p>Book your secure move now</p>
-              </div>
-            </div>
-            <div className="mp-qcard-body">
-              <div className="mp-field">
-                <label>Customer Name</label>
-                <input type="text" placeholder="Full Name" />
-              </div>
-
-              <div className="mp-row2">
-                <div className="mp-field">
-                  <label>Phone Number</label>
-                  <input type="tel" placeholder="+91 00000 00000" />
-                </div>
-                <div className="mp-field">
-                  <label>Shifting Required</label>
-                  <select defaultValue="">
-                    <option value="" disabled>Select Service</option>
-                    <option>Home Relocation</option>
-                    <option>Corporate Shifting</option>
-                    <option>Industrial Move</option>
-                    <option>Vehicle Transit</option>
-                  </select>
-                </div>
-              </div>
-
-              <div className="mp-row2">
-                <div className="mp-field">
-                  <label>Origin Area</label>
-                  <input type="text" placeholder="Ludhiana Area" />
-                </div>
-                <div className="mp-field">
-                  <label>Target City</label>
-                  <input type="text" placeholder="Destination" />
-                </div>
-              </div>
-
-              <div className="mp-field">
-                <label>Moving Date</label>
-                <input type="date" />
-              </div>
-
-              <button className="mp-submit-btn">
-                <i className="fa-solid fa-calculator" style={{ marginRight: '8px' }} />
-                Calculate Ludhiana Price
-              </button>
-            </div>
-          </div>
+          <HeroQuoteForm
+            title="Ludhiana Branch"
+            subtitle="Request an on-site survey"
+            icon="fa-map-location-dot"
+            moveType="Ludhiana Branch Quote"
+          />
         </div>
 
         {/* Wave */}

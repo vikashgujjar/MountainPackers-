@@ -26,7 +26,7 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
+    <html lang="en" data-scroll-behavior="smooth">
       <head>
         {/* GTM Head Script 1 */}
         <Script id="gtm-script-1" strategy="afterInteractive">
@@ -60,6 +60,9 @@ export default function RootLayout({ children }) {
         <link href="/css/responsive.css" rel="stylesheet" />
         <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
         <Script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossOrigin="anonymous" strategy="afterInteractive" />
+        <Script src="/js/vendor/jquery-1.12.4.min.js" strategy="beforeInteractive" />
+        <Script src="/engine1/wowslider.js" strategy="afterInteractive" />
+        <Script src="/engine1/script.js" strategy="afterInteractive" />
 
         <script
           type="application/ld+json"

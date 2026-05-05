@@ -6,6 +6,7 @@ import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import FloatingButtons from '@/components/FloatingButtons';
 import CTABand from '@/components/CTABand';
+import HeroQuoteForm from '@/components/HeroQuoteForm';
 
 export const metadata = {
   title: 'Best Packers and Movers In Chandigarh - Mountain Packers',
@@ -114,8 +115,8 @@ export default function ChandigarhBranchPage() {
             </h1>
 
             <p className="mp-hero-sub">
-              Experience the gold standard of relocation services in Chandigarh. 
-              Mountain Packers &amp; Movers provides stress-free, insured, and 
+              Experience the gold standard of relocation services in Chandigarh.
+              Mountain Packers &amp; Movers provides stress-free, insured, and
               safe shifting solutions for homes and offices.
             </p>
 
@@ -130,59 +131,12 @@ export default function ChandigarhBranchPage() {
           </div>
 
           {/* Right — Quote Card */}
-          <div className="mp-hero-qcard">
-            <div className="mp-qcard-head">
-              <i className="fa-solid fa-map-location-dot" />
-              <div>
-                <h3>Chandigarh Branch</h3>
-                <p>Request an on-site survey</p>
-              </div>
-            </div>
-            <div className="mp-qcard-body">
-              <div className="mp-field">
-                <label>Your Name</label>
-                <input type="text" placeholder="Full Name" />
-              </div>
-
-              <div className="mp-row2">
-                <div className="mp-field">
-                  <label>Mobile Number</label>
-                  <input type="tel" placeholder="+91 00000 00000" />
-                </div>
-                <div className="mp-field">
-                  <label>Moving Type</label>
-                  <select defaultValue="">
-                    <option value="" disabled>Select Type</option>
-                    <option>Within Chandigarh</option>
-                    <option>Chandigarh to Outstation</option>
-                    <option>Office Relocation</option>
-                    <option>Vehicle Transport</option>
-                  </select>
-                </div>
-              </div>
-
-              <div className="mp-row2">
-                <div className="mp-field">
-                  <label>Sector / Area</label>
-                  <input type="text" placeholder="Current Location" />
-                </div>
-                <div className="mp-field">
-                  <label>Destination City</label>
-                  <input type="text" placeholder="Drop Location" />
-                </div>
-              </div>
-
-              <div className="mp-field">
-                <label>Preferred Date</label>
-                <input type="date" />
-              </div>
-
-              <button className="mp-submit-btn">
-                <i className="fa-solid fa-paper-plane" style={{ marginRight: '8px' }} />
-                Get Estimate
-              </button>
-            </div>
-          </div>
+          <HeroQuoteForm
+            title="Chandigarh Branch"
+            subtitle="Request an on-site survey"
+            icon="fa-map-location-dot"
+            moveType="Chandigarh Branch Quote"
+          />
         </div>
 
         {/* Wave */}

@@ -6,6 +6,7 @@ import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import FloatingButtons from '@/components/FloatingButtons';
 import CTABand from '@/components/CTABand';
+import HeroQuoteForm from '@/components/HeroQuoteForm';
 
 export const metadata = {
   title: 'Mountain Packers - Packers and Movers in Dharamshala',
@@ -113,8 +114,8 @@ export default function DharamshalaBranchPage() {
             </h1>
 
             <p className="mp-hero-sub">
-              Experience a stress-free mountain relocation with Mountain Packers. 
-              We are specialists in navigating the Kangra Valley with guaranteed 
+              Experience a stress-free mountain relocation with Mountain Packers.
+              We are specialists in navigating the Kangra Valley with guaranteed
               safety and real-time tracking.
             </p>
 
@@ -129,59 +130,12 @@ export default function DharamshalaBranchPage() {
           </div>
 
           {/* Right — Quote Card */}
-          <div className="mp-hero-qcard">
-            <div className="mp-qcard-head">
-              <i className="fa-solid fa-mountain-sun" />
-              <div>
-                <h3>Dharamshala Shifting</h3>
-                <p>Request a personalized quote</p>
-              </div>
-            </div>
-            <div className="mp-qcard-body">
-              <div className="mp-field">
-                <label>Your Name</label>
-                <input type="text" placeholder="Enter full name" />
-              </div>
-
-              <div className="mp-row2">
-                <div className="mp-field">
-                  <label>Mobile Number</label>
-                  <input type="tel" placeholder="+91 00000 00000" />
-                </div>
-                <div className="mp-field">
-                  <label>Shifting Type</label>
-                  <select defaultValue="">
-                    <option value="" disabled>Select Type</option>
-                    <option>Home Relocation</option>
-                    <option>Commercial Shifting</option>
-                    <option>Vehicle Transport</option>
-                    <option>Storage Services</option>
-                  </select>
-                </div>
-              </div>
-
-              <div className="mp-row2">
-                <div className="mp-field">
-                  <label>From Area</label>
-                  <input type="text" placeholder="Pickup location" />
-                </div>
-                <div className="mp-field">
-                  <label>To Area</label>
-                  <input type="text" placeholder="Drop location" />
-                </div>
-              </div>
-
-              <div className="mp-field">
-                <label>Preferred Date</label>
-                <input type="date" />
-              </div>
-
-              <button className="mp-submit-btn">
-                <i className="fa-solid fa-paper-plane" style={{ marginRight: '8px' }} />
-                Get Shifting Estimate
-              </button>
-            </div>
-          </div>
+          <HeroQuoteForm
+            title="Dharamshala Branch"
+            subtitle="Request an on-site survey"
+            icon="fa-map-location-dot"
+            moveType="Dharamshala Branch Quote"
+          />
         </div>
 
         {/* Wave */}
@@ -289,7 +243,7 @@ export default function DharamshalaBranchPage() {
                   be a stressful experience, and that&apos;s why we are committed to providing the best
                   packing and moving service in Dharamshala.
                 </p>
-                
+
                 <div className="mp-why-bullets">
                   <p><strong>Here are a few reasons why you should choose Mountain Packers and Movers for your next move:</strong></p>
                   <ul className="mp-custom-list">

@@ -6,6 +6,7 @@ import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import FloatingButtons from '@/components/FloatingButtons';
 import CTABand from '@/components/CTABand';
+import CorporateQuoteForm from '@/components/CorporateQuoteForm';
 
 export const metadata = {
   title: 'Corporate Relocation Services In Chandigarh | Mountain Packers',
@@ -129,59 +130,12 @@ export default function CorporateRelocationPage() {
           </div>
 
           {/* Right — Quote Card */}
-          <div className="mp-hero-qcard">
-            <div className="mp-qcard-head">
-              <i className="fa-solid fa-building-circle-check" />
-              <div>
-                <h3>Plan Your Move</h3>
-                <p>Get an expert consultation</p>
-              </div>
-            </div>
-            <div className="mp-qcard-body">
-              <div className="mp-field">
-                <label>Company Name</label>
-                <input type="text" placeholder="Enter your organization name" />
-              </div>
-
-              <div className="mp-row2">
-                <div className="mp-field">
-                  <label>Contact Person</label>
-                  <input type="text" placeholder="Your name" />
-                </div>
-                <div className="mp-field">
-                  <label>Phone Number</label>
-                  <input type="tel" placeholder="+91 00000 00000" />
-                </div>
-              </div>
-
-              <div className="mp-row2">
-                <div className="mp-field">
-                  <label>Pickup City</label>
-                  <input type="text" placeholder="Current location" />
-                </div>
-                <div className="mp-field">
-                  <label>Drop City</label>
-                  <input type="text" placeholder="New location" />
-                </div>
-              </div>
-
-              <div className="mp-field">
-                <label>Inventory Size</label>
-                <select defaultValue="">
-                  <option value="" disabled>Select Office Size</option>
-                  <option>Small Office (1-10 staff)</option>
-                  <option>Medium Office (10-50 staff)</option>
-                  <option>Large Enterprise (50+ staff)</option>
-                  <option>Data Center / Specialized IT</option>
-                </select>
-              </div>
-
-              <button className="mp-submit-btn">
-                <i className="fa-solid fa-paper-plane" style={{ marginRight: '8px' }} />
-                Get Expert Quote
-              </button>
-            </div>
-          </div>
+          <CorporateQuoteForm 
+            title="Relocation Quote" 
+            subtitle="Get a customized corporate plan" 
+            icon="fa-building"
+            moveType="Corporate Relocation Quote"
+          />
         </div>
 
         {/* Wave */}

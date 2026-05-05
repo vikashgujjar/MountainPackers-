@@ -6,6 +6,7 @@ import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import FloatingButtons from '@/components/FloatingButtons';
 import CTABand from '@/components/CTABand';
+import HeroQuoteForm from '@/components/HeroQuoteForm';
 
 export const metadata = {
   title: 'Mountain Packers - Best Packers and Movers in Panchkula',
@@ -112,8 +113,8 @@ export default function PanchkulaBranchPage() {
             </h1>
 
             <p className="mp-hero-sub">
-              Trusted, reliable, and safest choice for shifting in Panchkula. 
-              Our expert team provides top-notch residential and corporate 
+              Trusted, reliable, and safest choice for shifting in Panchkula.
+              Our expert team provides top-notch residential and corporate
               relocation services across all sectors.
             </p>
 
@@ -128,59 +129,12 @@ export default function PanchkulaBranchPage() {
           </div>
 
           {/* Right — Quote Card */}
-          <div className="mp-hero-qcard">
-            <div className="mp-qcard-head">
-              <i className="fa-solid fa-house-chimney-window" />
-              <div>
-                <h3>Panchkula Quote</h3>
-                <p>Relocate with confidence</p>
-              </div>
-            </div>
-            <div className="mp-qcard-body">
-              <div className="mp-field">
-                <label>Your Name</label>
-                <input type="text" placeholder="Full name" />
-              </div>
-
-              <div className="mp-row2">
-                <div className="mp-field">
-                  <label>Mobile Number</label>
-                  <input type="tel" placeholder="+91 00000 00000" />
-                </div>
-                <div className="mp-field">
-                  <label>Service Type</label>
-                  <select defaultValue="">
-                    <option value="" disabled>Select Service</option>
-                    <option>Home Shifting</option>
-                    <option>Office Relocation</option>
-                    <option>Vehicle Transit</option>
-                    <option>Storage Services</option>
-                  </select>
-                </div>
-              </div>
-
-              <div className="mp-row2">
-                <div className="mp-field">
-                  <label>Current Sector</label>
-                  <input type="text" placeholder="Panchkula Sector" />
-                </div>
-                <div className="mp-field">
-                  <label>Target Area</label>
-                  <input type="text" placeholder="Destination" />
-                </div>
-              </div>
-
-              <div className="mp-field">
-                <label>Shifting Date</label>
-                <input type="date" />
-              </div>
-
-              <button className="mp-submit-btn">
-                <i className="fa-solid fa-calculator" style={{ marginRight: '8px' }} />
-                Calculate Panchkula Price
-              </button>
-            </div>
-          </div>
+          <HeroQuoteForm
+            title="Panchkula Branch"
+            subtitle="Request an on-site survey"
+            icon="fa-map-location-dot"
+            moveType="Panchkula Branch Quote"
+          />
         </div>
 
         {/* Wave */}

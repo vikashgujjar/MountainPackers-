@@ -1,6 +1,96 @@
-import React from 'react';
+'use client';
+import React, { useState } from 'react';
+import Swal from 'sweetalert2';
 
 const ContactSection = () => {
+  const [loader, setLoader] = useState(false);
+  const [errors, setErrors] = useState({});
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    subject: '',
+    message: '',
+  });
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData((prev) => ({ ...prev, [name]: value }));
+
+    if (errors[name]) {
+      setErrors((prev) => {
+        const next = { ...prev };
+        delete next[name];
+        return next;
+      });
+    }
+  };
+
+  const validateForm = () => {
+    const newErrors = {};
+    if (!formData.name.trim()) newErrors.name = 'Name is required';
+    if (!formData.email.trim()) {
+      newErrors.email = 'Email is required';
+    } else if (!/\S+@\S+\.\S+/.test(formData.email)) {
+      newErrors.email = 'Invalid email';
+    }
+    if (!formData.message.trim()) newErrors.message = 'Message is required';
+
+    setErrors(newErrors);
+    return Object.keys(newErrors).length === 0;
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    if (!validateForm()) {
+      Swal.fire({
+        icon: 'error',
+        title: 'Missing Fields',
+        text: 'Please check the form for errors.',
+        confirmButtonColor: '#004F80',
+      });
+      return;
+    }
+
+    setLoader(true);
+
+    const payload = {
+      company: "mountainpackers",
+      company_name: "Mountain Packers and Movers",
+      moveType: "Contact Page Form",
+      mail_to: "mountainpackersmover@gmail.com",
+      ...formData,
+    };
+
+    try {
+      const response = await fetch(
+        "https://mail.futuretouch.org/api/send-message",
+        {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(payload),
+        }
+      );
+
+      if (response.ok) {
+        await Swal.fire({
+          icon: "success",
+          title: "Message Sent!",
+          text: "Thank you for contacting us. We will get back to you shortly.",
+          confirmButtonColor: '#004F80',
+        });
+        setFormData({ name: '', email: '', subject: '', message: '' });
+      } else {
+        Swal.fire("Error", "Something went wrong. Please try again.", "error");
+      }
+    } catch (err) {
+      console.error(err);
+      Swal.fire("Error", "Network error. Please try again.", "error");
+    } finally {
+      setLoader(false);
+    }
+  };
+
   return (
     <section className="mp-contact-section py-10 bg-white position-relative overflow-hidden">
       {/* Decorative Elements */}
@@ -20,35 +110,66 @@ const ContactSection = () => {
           {/* Contact Form */}
           <div className="col-lg-8 sr vis d2">
             <div className="mp-glass-card p-5 rounded-5 border-0 shadow-2xl bg-white mp-border-gradient">
-              <form action="#" className="mp-premium-form">
+              <form onSubmit={handleSubmit} className="mp-premium-form">
                 <div className="row g-4">
                   <div className="col-md-6">
                     <div className="form-group mb-4">
                       <label className="small fw-bold text-navy text-uppercase tracking-widest mb-2 d-block">Full Name</label>
-                      <input type="text" className="form-control mp-form-control" placeholder="e.g. John Doe" required />
+                      <input
+                        type="text"
+                        name="name"
+                        className="form-control mp-form-control"
+                        placeholder="e.g. John Doe"
+                        value={formData.name}
+                        onChange={handleChange}
+                        style={errors.name ? { borderColor: 'red' } : {}}
+                      />
                     </div>
                   </div>
                   <div className="col-md-6">
                     <div className="form-group mb-4">
                       <label className="small fw-bold text-navy text-uppercase tracking-widest mb-2 d-block">Email Address</label>
-                      <input type="email" className="form-control mp-form-control" placeholder="e.g. john@example.com" required />
+                      <input
+                        type="email"
+                        name="email"
+                        className="form-control mp-form-control"
+                        placeholder="e.g. john@example.com"
+                        value={formData.email}
+                        onChange={handleChange}
+                        style={errors.email ? { borderColor: 'red' } : {}}
+                      />
                     </div>
                   </div>
                   <div className="col-12">
                     <div className="form-group mb-4">
                       <label className="small fw-bold text-navy text-uppercase tracking-widest mb-2 d-block">Subject</label>
-                      <input type="text" className="form-control mp-form-control" placeholder="How can we help you?" />
+                      <input
+                        type="text"
+                        name="subject"
+                        className="form-control mp-form-control"
+                        placeholder="How can we help you?"
+                        value={formData.subject}
+                        onChange={handleChange}
+                      />
                     </div>
                   </div>
                   <div className="col-12">
                     <div className="form-group mb-4">
                       <label className="small fw-bold text-navy text-uppercase tracking-widest mb-2 d-block">Your Message</label>
-                      <textarea className="form-control mp-form-control" rows="6" placeholder="Describe your moving requirements..."></textarea>
+                      <textarea
+                        name="message"
+                        className="form-control mp-form-control"
+                        rows="6"
+                        placeholder="Describe your moving requirements..."
+                        value={formData.message}
+                        onChange={handleChange}
+                        style={errors.message ? { borderColor: 'red' } : {}}
+                      ></textarea>
                     </div>
                   </div>
                   <div className="col-12">
-                    <button type="submit" className="mp-hbtn py-4 h5 mb-0 text-uppercase tracking-widest text-white border-0">
-                      Send Message <i className="fa-solid fa-paper-plane ms-2"></i>
+                    <button type="submit" disabled={loader} className="mp-hbtn py-4 h5 mb-0 text-uppercase tracking-widest text-white border-0 w-100">
+                      {loader ? 'Sending...' : <>Send Message <i className="fa-solid fa-paper-plane ms-2"></i></>}
                     </button>
                   </div>
                 </div>
@@ -100,11 +221,15 @@ const ContactSection = () => {
               <div className="mp-glass-card p-5 rounded-5 border-0 shadow-lg bg-light">
                 <h4 className="h5 fw-black text-navy text-uppercase tracking-1 mb-4">Follow Our Journey</h4>
                 <div className="d-flex gap-3">
-                  {['facebook', 'twitter', 'instagram', 'pinterest', 'youtube'].map((social) => (
-                    <a key={social} href="#" className="mp-social-icon-btn shadow-sm bg-white rounded-circle d-flex align-items-center justify-content-center text-navy transition-all" style={{ width: '45px', height: '45px' }}>
-                      <i className={`fa-brands fa-${social === 'facebook' ? 'facebook-f' : social}`}></i>
-                    </a>
-                  ))}
+                  <a href="https://www.facebook.com/p/Mountain-Packers-Movers-100090872461843/?locale=tl_PH" target="_blank" className="mp-social-icon-btn shadow-sm bg-white rounded-circle d-flex align-items-center justify-content-center text-navy transition-all" style={{ width: '45px', height: '45px' }}>
+                    <i className="fa-brands fa-facebook-f"></i>
+                  </a>
+                  <a href="https://x.com/PackersMountain" target="_blank" className="mp-social-icon-btn shadow-sm bg-white rounded-circle d-flex align-items-center justify-content-center text-navy transition-all" style={{ width: '45px', height: '45px' }}>
+                    <i className="fa-brands fa-x-twitter"></i>
+                  </a>
+                  <a href="https://www.instagram.com/mountainpackers/" target="_blank" className="mp-social-icon-btn shadow-sm bg-white rounded-circle d-flex align-items-center justify-content-center text-navy transition-all" style={{ width: '45px', height: '45px' }}>
+                    <i className="fa-brands fa-instagram"></i>
+                  </a>
                 </div>
               </div>
             </div>

@@ -6,6 +6,7 @@ import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import FloatingButtons from '@/components/FloatingButtons';
 import CTABand from '@/components/CTABand';
+import HeroQuoteForm from '@/components/HeroQuoteForm';
 
 export const metadata = {
   title: 'Mountain Packers - Best Packers and Movers in Jalandhar',
@@ -113,8 +114,8 @@ export default function JalandharBranchPage() {
             </h1>
 
             <p className="mp-hero-sub">
-              Your trusted partner for hassle-free shifting in Jalandhar. 
-              We offer top-notch moving services including professional packing, 
+              Your trusted partner for hassle-free shifting in Jalandhar.
+              We offer top-notch moving services including professional packing,
               safe loading, and timely unloading at competitive prices.
             </p>
 
@@ -129,59 +130,12 @@ export default function JalandharBranchPage() {
           </div>
 
           {/* Right — Quote Card */}
-          <div className="mp-hero-qcard">
-            <div className="mp-qcard-head">
-              <i className="fa-solid fa-building-circle-check" />
-              <div>
-                <h3>Jalandhar Quote</h3>
-                <p>Stress-free relocation starts here</p>
-              </div>
-            </div>
-            <div className="mp-qcard-body">
-              <div className="mp-field">
-                <label>Your Name</label>
-                <input type="text" placeholder="Enter name" />
-              </div>
-
-              <div className="mp-row2">
-                <div className="mp-field">
-                  <label>Phone Number</label>
-                  <input type="tel" placeholder="+91 00000 00000" />
-                </div>
-                <div className="mp-field">
-                  <label>Shifting Service</label>
-                  <select defaultValue="">
-                    <option value="" disabled>Select Service</option>
-                    <option>House Relocation</option>
-                    <option>Office Shifting</option>
-                    <option>Car/Bike Transport</option>
-                    <option>Warehousing</option>
-                  </select>
-                </div>
-              </div>
-
-              <div className="mp-row2">
-                <div className="mp-field">
-                  <label>Current Area</label>
-                  <input type="text" placeholder="Pickup point" />
-                </div>
-                <div className="mp-field">
-                  <label>Target Area</label>
-                  <input type="text" placeholder="Drop point" />
-                </div>
-              </div>
-
-              <div className="mp-field">
-                <label>Proposed Date</label>
-                <input type="date" />
-              </div>
-
-              <button className="mp-submit-btn">
-                <i className="fa-solid fa-truck-ramp-box" style={{ marginRight: '8px' }} />
-                Get Instant Estimate
-              </button>
-            </div>
-          </div>
+          <HeroQuoteForm
+            title="Jalandhar Branch"
+            subtitle="Request an on-site survey"
+            icon="fa-map-location-dot"
+            moveType="Jalandhar Branch Quote"
+          />
         </div>
 
         {/* Wave */}
